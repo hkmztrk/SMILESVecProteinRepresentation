@@ -5,8 +5,8 @@ mkdir "outputs" #$DIRNAME
 
 
 LRNDRUGLINGO8="data/word/drug.l8.chembl23.canon.ws20.txt" 
-LRNDRUGCHR1="data/char/drug.chembl.canon.l1.ws20.txt"
-LRNDRUGCHR1Pub="data/char/drug.pubchem.canon.l1.ws20.txt"
+LRNDRUGCHR1="data/char/drug.l1.chembl23.canon.ws20.txt"
+LRNDRUGCHR1Pub="data/char/drug.l1.pubchem.canon.ws20.txt"
 
 LRNPROTLINGO="data/word/prot.l3.w20.100d.txt"
 LRNPROTCHR="data/char/prot.w25.d100.txt"
