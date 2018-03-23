@@ -1,7 +1,7 @@
 #DIRNAME=$(date +%Y%m%d_%H%M%S)
 #mkdir "docs" #$DIRNAME
 mkdir "outputs" #$DIRNAME
-#mkdir "data" #$DIRNAME
+
 
 
 LRNDRUGLINGO8="data/word/drug.l8.chembl23.canon.ws20.txt" 
@@ -32,6 +32,6 @@ python lingosim.py $LRNPROTLINGO $PAIRList $SEQFILE "wd" "p" $lprotLen $MODELCHO
 #SMILESVec
 
 awk "BEGIN { print \"Computing similarity list..!!\" }"
-python lingosmi.py $LRNDRUGLINGO8Pub $PAIRList $SMILESFILE "wd" "l" $ldrugLen  $INTERACTIONFILE $SMICHOICE #MODEL AVG
+python lingosmi.py $LRNDRUGLINGO8 $PAIRList $SMILESFILE "wd" "l" $ldrugLen  $INTERACTIONFILE $SMICHOICE #MODEL AVG
 
 $SHELL
