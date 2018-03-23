@@ -11,14 +11,15 @@ ProtVec and SMILESVec representations are built based on [Word2vec](https://pape
 	
 "source code" folder contains python source code.
 
+Embeddings files are provided in [here](https://cmpe.boun.edu.tr/~hakime.ozturk/sources.html)
+
 
 ### Prerequisites
 
 You'll need to install following in order to run the codes.
 
 ```
-Gensim
-Python 2.7.x
+Python 2.7.x or Python 3.x
 numpy
 sklearn
 ```
