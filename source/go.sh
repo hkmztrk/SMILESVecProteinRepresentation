@@ -12,7 +12,7 @@ LRNPROTLINGO="data/word/prot.l3.w20.100d.txt"
 LRNPROTCHR="data/char/prot.w25.d100.txt"
 
 SEQFILE="a50/a50fam.se.filtered" 
-PAIRList="a50/xac"
+PAIRList="a50/a50fam.se.filtered.pairs"
 SMILESFILE="a50/a50fam.se.filtered.smiles"
 
 INTERACTIONFILE="a50/a50fam.se.filtered.interactions"
