@@ -11,7 +11,7 @@ ProtVec and SMILESVec representations are built based on [Word2vec](https://pape
 	
 "source code" folder contains python source code.
 
-Embeddings files are provided in [here](https://cmpe.boun.edu.tr/~hakime.ozturk/sources.html)
+Embeddings files are provided in [here](https://cmpe.boun.edu.tr/~hakime.ozturk/smilesvec.html)
 
 
 ### Prerequisites
