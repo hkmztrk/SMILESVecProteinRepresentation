@@ -27,13 +27,10 @@ sklearn
 
 ## Protein Similarity
 
-### ProtVec-based Protein Similarity
-```
-bash go.sh 
-```
-
 ### SMILESVec-based Protein Similarity
-
 ```
 bash go.sh 
+```
+
+
 ```
