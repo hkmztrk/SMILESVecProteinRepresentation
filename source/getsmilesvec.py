@@ -2,15 +2,15 @@ from wordextract import *
 from cmethods import *
 import sys
 
+emb_file = sys.argv[1]
+smiles = sys.argv[2]
 
-smiles = sys.argv[1]
-emb_file = "data/drug.l8.chembl23.canon.w20.txt"
 
 
 def loadEmbeddings(LRNPATH):
     embeddings_index = {}
 
-    f = open(os.path.join(LRNPATH)) #'word.11l.100d.txt'
+    f = open(os.path.join("data/"+LRNPATH)) #'word.11l.100d.txt'
     next(f)
     vsize = 0
     for line in f:
