@@ -32,7 +32,7 @@ sklearn
 will be updated
 ```
 
-### get SMILESVec-based representation for given protein UniProt
+### get SMILESVec-based representation for given protein (UniProt ID)
 ```
 will be updated
 ```
