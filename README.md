@@ -25,12 +25,21 @@ sklearn
 ```
 
 
-## Protein Similarity
+## Options
 
-### SMILESVec-based Protein Similarity
+### get SMILESVec for given SMILES
 ```
-bash go.sh 
+will be updated
+```
+
+### get SMILESVec-based representation for given protein UniProt
+```
+will be updated
+```
+
+### SMILESVec-based Protein Similarity for SCOP A-50
+```
+will be updated
 ```
 
 
-```
