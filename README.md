@@ -22,24 +22,24 @@ You'll need to install following in order to run the codes.
 *   sklearn
 *   [chembl_webresource_client](https://github.com/chembl/chembl_webresource_client) 
 
+In order to run the code you have to place an embedding file under ```utils``` folder inside the source folder. 
 
+You can use either  ```drug.l8.chembl23.canon.ws20.txt``` or ```drug.l8.pubchem.canon.ws20.txt```
 
 ## Options
-
-In order to run the code you have to place an embedding file under 'utils' folder inside the source folder.
 
 ### get SMILESVec for given SMILES
 For a list of SMILES strings, it outputs the corresponding SMILESVec.
 The following code runs for   ```smiles_sample.txt``` file under utils folder. 
 ```
-python getsmilesvec.py
+python getsmilesvec.py [embedding_file_name]
 ```
 
 ### get SMILESVec-based representation for given protein (UniProt ID)
 For a list of UniProt IDs, it outputs the corresponding SMILESVec-based protein vectors.
 The following code runs for  ```prots_sample.txt``` file under utils folder.
 ```
-python getligprotvec.py
+python getligprotvec.py [embedding_file_name]
 ```
 
 ### SMILESVec-based Protein Similarity for SCOP A-50
