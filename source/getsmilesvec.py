@@ -3,7 +3,7 @@ from cmethods import *
 import sys, pickle
 
 smiles_path = "utils/smiles_sample.txt"
-emb_path = "utils/drug.l8.chembl23.canon.ws20.txt"
+emb_path = "utils/" + sys.argv[1]
 
 def loadEmbeddings(LRNPATH):
     embeddings_index = {}
