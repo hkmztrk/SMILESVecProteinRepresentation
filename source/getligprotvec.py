@@ -5,7 +5,7 @@ from getsmilesvec import *
 
 mapfile = "utils/chembl_uniprot_mapping.txt"
 proteins_path = "utils/prots_sample.txt"
-emb_path = "utils/" + + sys.argv[1]
+emb_path = "utils/" + sys.argv[1]
 
 
 class PLI:
