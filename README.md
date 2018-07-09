@@ -7,7 +7,6 @@ ProtVec and SMILESVec representations are built based on [Word2vec](https://pape
 ### Folders 
 
 "data" folder contains the input and output files.
-
 	
 "source code" folder contains python source code.
 
@@ -18,12 +17,11 @@ Embeddings files are provided in [here](https://cmpe.boun.edu.tr/~hakime.ozturk/
 
 You'll need to install following in order to run the codes.
 
-```
-Python 2.7.x or Python 3.x
-numpy
-sklearn
-[chembl_webresource_client](https://github.com/chembl/chembl_webresource_client)
-```
+*   Python 2.7.x or Python 3.x
+*   numpy
+*   sklearn
+*   [chembl_webresource_client](https://github.com/chembl/chembl_webresource_client) 
+
 
 
 ## Options
@@ -50,9 +48,8 @@ will be updated
 ```
 
 For citation:
-```
 [A novel methodology on distributed representations of proteins using their interacting ligands](https://academic.oup.com/bioinformatics/article/34/13/i295/5045707) 
-
+```
 @article{Ozturk2018Anovel,
 author = {Öztürk, Hakime and Ozkirimli, Elif and Özgür, Arzucan},
 title = {A novel methodology on distributed representations of proteins using their interacting ligands},
