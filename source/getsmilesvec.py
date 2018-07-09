@@ -1,16 +1,14 @@
 from wordextract import *
 from cmethods import *
-import sys
+import sys, pickle
 
-emb_file = sys.argv[1]
-smiles = sys.argv[2]
-
-
+smiles_path = "utils/smiles_sample.txt"
+emb_path = "utils/drug.l8.chembl23.canon.ws20.txt"
 
 def loadEmbeddings(LRNPATH):
     embeddings_index = {}
 
-    f = open(os.path.join("data/"+LRNPATH)) #'word.11l.100d.txt'
+    f = open(os.path.join(LRNPATH)) #'word.11l.100d.txt'
     next(f)
     vsize = 0
     for line in f:
@@ -23,10 +21,10 @@ def loadEmbeddings(LRNPATH):
 
     return embeddings_index, vsize
 
-EMB, vsize = loadEmbeddings(emb_file)
 
 
-def getSMIVector(LINGOembds, smiles, q, wordOrChar):
+
+def getSMIVector(LINGOembds, smiles, q=8, wordOrChar="wd"):
 
 
     lingoList = []
@@ -36,8 +34,23 @@ def getSMIVector(LINGOembds, smiles, q, wordOrChar):
     #    lingoList = createCHRs(smiles, "l") #ligand, q=1
 
     smilesVec = vectorAddAvg(LINGOembds, lingoList)
-    print(smilesVec)
+
     return smilesVec
 
 
-getSMIVector(EMB, smiles, 8, "wd")
+def returnSMIVector(emb_file, smiles_path):
+    EMB, vsize = loadEmbeddings(emb_file)
+
+    smiless = [line.strip() for line in open(smiles_path)]
+    print("Constructing SMILES vectors..")
+    smiVectors = [] 
+    for smi in smiless:
+        smiVectors.append(getSMIVector(EMB, smi))
+
+    pickle.dump(smiVectors, open("smiles.vec",'wb')) 
+    print("Done.")
+
+
+if __name__=="__main__":
+    #emb_file, smiles_path
+    returnSMIVector(emb_path, smiles_path)
