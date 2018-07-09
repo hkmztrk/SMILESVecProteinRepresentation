@@ -22,7 +22,7 @@ You'll need to install following in order to run the codes.
 Python 2.7.x or Python 3.x
 numpy
 sklearn
-(chembl_webresource_client) [https://github.com/chembl/chembl_webresource_client]
+[chembl_webresource_client](https://github.com/chembl/chembl_webresource_client)
 ```
 
 
@@ -39,7 +39,7 @@ python getsmilesvec.py
 
 ### get SMILESVec-based representation for given protein (UniProt ID)
 For a list of UniProt IDs, it outputs the corresponding SMILESVec-based protein vectors.
-The following code runs for the prots_sample.txt file under utils folder.
+The following code runs for  ```prots_sample.txt``` file under utils folder.
 ```
 python getligprotvec.py
 ```
