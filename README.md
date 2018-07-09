@@ -45,7 +45,7 @@ will be updated
 ```
 
 For citation:
-
+```
 @article{Ozturk2018Anovel,
 author = {Öztürk, Hakime and Ozkirimli, Elif and Özgür, Arzucan},
 title = {A novel methodology on distributed representations of proteins using their interacting ligands},
@@ -58,4 +58,4 @@ doi = {10.1093/bioinformatics/bty287},
 URL = {http://dx.doi.org/10.1093/bioinformatics/bty287}
 
 }
-
+```
