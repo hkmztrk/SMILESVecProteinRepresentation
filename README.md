@@ -33,6 +33,7 @@ For a list of SMILES strings, it outputs the corresponding SMILESVec.
 The following code runs for   ```smiles_sample.txt``` file under utils folder. 
 ```
 python getsmilesvec.py [embedding_file_name]
+python getsmilesvec.py drug.l8.chembl23.canon.ws20.txt
 ```
 
 ### get SMILESVec-based representation for given protein (UniProt ID)
@@ -40,6 +41,7 @@ For a list of UniProt IDs, it outputs the corresponding SMILESVec-based protein 
 The following code runs for  ```prots_sample.txt``` file under utils folder.
 ```
 python getligprotvec.py [embedding_file_name]
+python getligprotvec.py drug.l8.pubchem.canon.ws20.txt
 ```
 
 ### SMILESVec-based Protein Similarity for SCOP A-50
