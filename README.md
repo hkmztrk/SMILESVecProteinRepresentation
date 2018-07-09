@@ -22,21 +22,26 @@ You'll need to install following in order to run the codes.
 Python 2.7.x or Python 3.x
 numpy
 sklearn
+(chembl_webresource_client) [https://github.com/chembl/chembl_webresource_client]
 ```
 
 
 ## Options
 
+In order to run the code you have to place an embedding file under 'utils' folder inside the source folder.
+
 ### get SMILESVec for given SMILES
 For a list of SMILES strings, it outputs the corresponding SMILESVec.
+The following code runs for  smiles_sample.txt file under utils folder. 
 ```
-will be updated
+python getsmilesvec.py
 ```
 
 ### get SMILESVec-based representation for given protein (UniProt ID)
 For a list of UniProt IDs, it outputs the corresponding SMILESVec-based protein vectors.
+The following code runs for the prots_sample.txt file under utils folder.
 ```
-will be updated
+python getligprotvec.py
 ```
 
 ### SMILESVec-based Protein Similarity for SCOP A-50
