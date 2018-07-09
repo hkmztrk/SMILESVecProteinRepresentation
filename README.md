@@ -47,23 +47,14 @@ will be updated
 For citation:
 
 @article{Ozturk2018Anovel,
-
 author = {Öztürk, Hakime and Ozkirimli, Elif and Özgür, Arzucan},
-
 title = {A novel methodology on distributed representations of proteins using their interacting ligands},
-
 journal = {Bioinformatics},
-
 volume = {34},
-
 number = {13},
-
 pages = {i295-i303},
-
 year = {2018},
-
 doi = {10.1093/bioinformatics/bty287},
-
 URL = {http://dx.doi.org/10.1093/bioinformatics/bty287}
 
 }
