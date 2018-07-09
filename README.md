@@ -32,7 +32,7 @@ In order to run the code you have to place an embedding file under 'utils' folde
 
 ### get SMILESVec for given SMILES
 For a list of SMILES strings, it outputs the corresponding SMILESVec.
-The following code runs for  smiles_sample.txt file under utils folder. 
+The following code runs for   ```smiles_sample.txt``` file under utils folder. 
 ```
 python getsmilesvec.py
 ```
@@ -51,6 +51,8 @@ will be updated
 
 For citation:
 ```
+[A novel methodology on distributed representations of proteins using their interacting ligands](https://academic.oup.com/bioinformatics/article/34/13/i295/5045707)
+
 @article{Ozturk2018Anovel,
 author = {Öztürk, Hakime and Ozkirimli, Elif and Özgür, Arzucan},
 title = {A novel methodology on distributed representations of proteins using their interacting ligands},
