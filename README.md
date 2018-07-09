@@ -47,7 +47,8 @@ python getligprotvec.py
 will be updated
 ```
 
-For citation:
+**For citation:**
+
 [A novel methodology on distributed representations of proteins using their interacting ligands](https://academic.oup.com/bioinformatics/article/34/13/i295/5045707) 
 ```
 @article{Ozturk2018Anovel,
