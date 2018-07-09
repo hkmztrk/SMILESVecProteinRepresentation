@@ -28,11 +28,13 @@ sklearn
 ## Options
 
 ### get SMILESVec for given SMILES
+For a list of SMILES strings, it outputs the corresponding SMILESVec.
 ```
 will be updated
 ```
 
 ### get SMILESVec-based representation for given protein (UniProt ID)
+For a list of UniProt IDs, it outputs the corresponding SMILESVec-based protein vectors.
 ```
 will be updated
 ```
@@ -42,4 +44,17 @@ will be updated
 will be updated
 ```
 
+For citation:
+
+@article{doi:10.1093/bioinformatics/bty287,
+author = {Öztürk, Hakime and Ozkirimli, Elif and Özgür, Arzucan},
+title = {A novel methodology on distributed representations of proteins using their interacting ligands},
+journal = {Bioinformatics},
+volume = {34},
+number = {13},
+pages = {i295-i303},
+year = {2018},
+doi = {10.1093/bioinformatics/bty287},
+URL = {http://dx.doi.org/10.1093/bioinformatics/bty287}
+}
 
