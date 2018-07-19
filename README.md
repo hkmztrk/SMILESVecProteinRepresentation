@@ -1,10 +1,10 @@
-# SMILESVecProteinRepresentation
+# About SMILESVec based Protein Representation
 
 ProtVec and SMILESVec representations are built based on [Word2vec](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) model by Mikolov et al. Gensim implementation was used to build word-embeddings.
 
 ****************************************************************
-## Getting Started
-### Folders 
+## Installation
+### Data 
 
 "data" folder contains the input and output files.
 	
@@ -13,7 +13,7 @@ ProtVec and SMILESVec representations are built based on [Word2vec](https://pape
 Embeddings files are provided in [here](https://cmpe.boun.edu.tr/~hakime.ozturk/smilesvec.html)
 
 
-### Prerequisites
+### Requirements
 
 You'll need to install following in order to run the codes.
 
@@ -26,7 +26,7 @@ In order to run the code you have to place an embedding file under ```utils``` f
 
 You can use either  ```drug.l8.chembl23.canon.ws20.txt``` or ```drug.l8.pubchem.canon.ws20.txt```
 
-## Options
+# Usage
 
 ### get SMILESVec for given SMILES
 For a list of SMILES strings, it outputs the corresponding SMILESVec.
