@@ -1,10 +1,14 @@
 # About SMILESVec based Protein Representation
 
+Here, we represent proteins using their interactings ligands. We utilize SMILES representation of ligands and propose, SMILESVec, which is a ligand representation that is built using  [Word2vec](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) model by Mikolov et al.  
 
+Each SMILES is divided into overlapping subsequences that we call chemical words. Then Word2Vec learns a high-dimensional and real-valued vector for each of these chemical words. SMILES vector is described as the average of the vectors of its chemical word vector.
+
+We used [Gensim](https://radimrehurek.com/gensim/) implementation  to build word-embeddings.
 
 ![Figure](https://github.com/hkmztrk/SMILESVecProteinRepresentation/blob/master/docs/figures/smilesvec.jpg)
 
-SMILESVec representations are built based on [Word2vec](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) model by Mikolov et al. Gensim implementation was used to build word-embeddings.
+
 
 ****************************************************************
 ## Installation
