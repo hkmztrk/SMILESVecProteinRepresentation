@@ -1,6 +1,10 @@
 # About SMILESVec based Protein Representation
 
-ProtVec and SMILESVec representations are built based on [Word2vec](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) model by Mikolov et al. Gensim implementation was used to build word-embeddings.
+
+
+![Figure](https://github.com/hkmztrk/SMILESVecProteinRepresentation/blob/master/docs/figures/smilesvec.jpg?raw=true)
+
+SMILESVec representations are built based on [Word2vec](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) model by Mikolov et al. Gensim implementation was used to build word-embeddings.
 
 ****************************************************************
 ## Installation
