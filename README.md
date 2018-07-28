@@ -2,7 +2,7 @@
 
 
 
-![Figure](https://github.com/hkmztrk/SMILESVecProteinRepresentation/blob/master/docs/figures/smilesvec.jpg?raw=true)
+![Figure](https://github.com/hkmztrk/SMILESVecProteinRepresentation/blob/master/docs/figures/smilesvec.jpg)
 
 SMILESVec representations are built based on [Word2vec](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) model by Mikolov et al. Gensim implementation was used to build word-embeddings.
 
