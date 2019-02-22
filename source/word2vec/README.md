@@ -19,11 +19,15 @@ You'll need to install [Gensim](https://radimrehurek.com/gensim/) run  to build 
 
 *    You should provide two SMILES files similar to the ones under "SMILESDATA" folder (train and test). In these files, there is SMILES in each line. Other than ChEMBL, you can use Pubchem or BindingDB to collect SMILES or use your own SMILES data
 	
-*  Modify 'go.sh' file according to your needs (e.g. name of your SMILES file, length of SMILES words, window size for training).
+*  Modify 'go.sh' file according to your needs (e.g. name of your SMILES file, length of SMILES words, window size for training)
+
+		e.g.
+		SMIPATH="SMILESDATA/[yourfilename].txt" ## include your training data here
+		SMITESTPATH="SMILESDATA/[yourfilename].txt" #include a small test data
 
 *  Modify 'gensimword.py' file according to your needs:
 
-		 size=100, min_count=1, negative=5, iter=20, sg=1
+		 e.g. size=100, min_count=1, negative=5, iter=20, sg=1
 
 
 
