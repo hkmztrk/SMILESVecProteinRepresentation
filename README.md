@@ -52,6 +52,10 @@ python getligprotvec.py [embedding_file_name]
 python getligprotvec.py drug.l8.pubchem.canon.ws20.txt
 ```
 
+### How to train your own embeddings of SMILES?
+
+Please refer to [README here](https://github.com/hkmztrk/SMILESVecProteinRepresentation/tree/master/source/word2vec) for detailed information and source code.
+
 ### SMILESVec-based Protein Similarity for SCOP A-50
 ```
 will be updated
