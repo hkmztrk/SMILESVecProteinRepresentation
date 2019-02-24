@@ -29,6 +29,7 @@ You'll need to install following in order to run the codes.
 *   numpy
 *   sklearn
 *   [chembl_webresource_client](https://github.com/chembl/chembl_webresource_client) 
+*   pickle
 
 In order to run the code you have to place an embedding file under ```utils``` folder inside the source folder. 
 
