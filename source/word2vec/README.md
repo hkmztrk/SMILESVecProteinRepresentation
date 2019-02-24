@@ -32,16 +32,14 @@ In order to obtain your own file of chemical word embeddings from your own train
 		e.g.
 		Line 6:	SMIPATH="SMILESDATA/[yourfilename].txt" ## include your training data here
 		Line 7:	SMITESTPATH="SMILESDATA/[yourfilename].txt" #include a small test data
+		
+		Line 10:	for LINGOSize in 8  ## you can change the length of words here
+		Line 12:	for WINDOWSize in 10 20 ## you can change window size for training 
 
 *  Modify 'gensimword.py' file according to how you want to design your embeddings. Refer to [Gensim](https://radimrehurek.com/gensim/models/word2vec.html) for detailed explanation.
 
 		 e.g. 
 		 Line 20:	model = gensim.models.Word2Vec(..., size=100, min_count=1, negative=5, iter=20, sg=1, ..)
-
-
-
-
-
 
 
 
