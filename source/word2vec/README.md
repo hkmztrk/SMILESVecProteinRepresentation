@@ -18,11 +18,12 @@ In order to obtain your own file of chemical word embeddings from your own train
 ### Steps 
 
 *    You should provide two SMILES files similar to the ones under "SMILESDATA" folder (train and test). In these files, each line contains a single SMILES string. 
-
-		CCOC(CN1C2=C(C(=N1)C3=CC4=C(C=C3)OC(=N4)N)C(=NC=N2)N)OCC
-		COC1=CC(=C(C(=C1OC)Cl)C=NNC(=O)CCCCC(=O)NO)Cl
-		C1=CC=C(C(=C1)NC(=O)CCCCCC(=O)NN=CC2=C(N=CC=C2)Br)O
-		C1=CC=C2C(=C1)C=CC(=N2)C=NNC(=O)CCCCCCC(=O)NC3=CC=CC=C3O
+	
+	e.g.
+	CCOC(CN1C2=C(C(=N1)C3=CC4=C(C=C3)OC(=N4)N)C(=NC=N2)N)OCC
+	COC1=CC(=C(C(=C1OC)Cl)C=NNC(=O)CCCCC(=O)NO)Cl
+	C1=CC=C(C(=C1)NC(=O)CCCCCC(=O)NN=CC2=C(N=CC=C2)Br)O
+	C1=CC=C2C(=C1)C=CC(=N2)C=NNC(=O)CCCCCCC(=O)NC3=CC=CC=C3O
 
 *    Other than [ChEMBL](https://www.ebi.ac.uk/chembl/ws), you can use [Pubchem](https://pubchem.ncbi.nlm.nih.gov) or [BindingDB](http://bindingdb.org) to collect SMILES.
 	
