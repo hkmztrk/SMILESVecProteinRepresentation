@@ -29,7 +29,7 @@ You'll need to install following in order to run the codes.
 *   numpy
 *   sklearn
 *   [chembl_webresource_client](https://github.com/chembl/chembl_webresource_client) 
-	for dependency issues:
+    -   for dependency issues:
 	pip install --force-reinstall gevent==1.2.2
 	pip install --force-reinstall greenlet==0.4.12
 *   pickle
