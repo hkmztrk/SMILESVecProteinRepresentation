@@ -9,15 +9,17 @@ Then Word2Vec learns a high-dimensional and real-valued vector for each of these
 
 The final file containing embedding vectors for each word is named 'drug.l8.chembl23.canon.ws20.txt'. It is trained on about 2M SMILES data collected from ChEMBL.
 
-In order to obtain your own file of embeddings from your own training data:
+In order to obtain your own file of chemical word embeddings from your own training data:
 
 ### Requirements
 
-You'll need to install [Gensim](https://radimrehurek.com/gensim/) run  to build word-embeddings.
+*    [Gensim](https://radimrehurek.com/gensim/)  to run Wwrd2vec.
 
 ### Steps 
 
-*    You should provide two SMILES files similar to the ones under "SMILESDATA" folder (train and test). In these files, there is SMILES in each line. Other than ChEMBL, you can use Pubchem or BindingDB to collect SMILES or use your own SMILES data
+*    You should provide two SMILES files similar to the ones under "SMILESDATA" folder (train and test). In these files, each line contains a single SMILES string. 
+
+*    Other than [ChEMBL](https://www.ebi.ac.uk/chembl/ws), you can use [Pubchem](https://pubchem.ncbi.nlm.nih.gov) or [BindingDB](http://bindingdb.org) to collect SMILES.
 	
 *  Modify 'go.sh' file according to your needs (e.g. name of your SMILES file, length of SMILES words, window size for training)
 
