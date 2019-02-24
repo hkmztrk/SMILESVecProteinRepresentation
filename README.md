@@ -44,6 +44,9 @@ python getsmilesvec.py [embedding_file_name]
 python getsmilesvec.py drug.l8.chembl23.canon.ws20.txt
 ```
 
+output: ```smiles.vec``` is a pickle file.
+use ```pickle.load(open("smiles.vec"))``` to open it. 
+
 ### get SMILESVec-based representation for given protein (UniProt ID)
 For a list of UniProt IDs, it outputs the corresponding SMILESVec-based protein vectors.
 The following code runs for  ```prots_sample.txt``` file under utils folder.
@@ -51,6 +54,9 @@ The following code runs for  ```prots_sample.txt``` file under utils folder.
 python getligprotvec.py [embedding_file_name]
 python getligprotvec.py drug.l8.pubchem.canon.ws20.txt
 ```
+
+output: ```prot.vec``` is a pickle file.
+use ```pickle.load(open("prot.vec"))``` to open it. 
 
 ### How to train your own embeddings of SMILES?
 
