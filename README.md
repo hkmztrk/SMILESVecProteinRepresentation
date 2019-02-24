@@ -30,8 +30,8 @@ You'll need to install following in order to run the codes.
 *   sklearn
 *   [chembl_webresource_client](https://github.com/chembl/chembl_webresource_client) 
     -   for dependency issues:
-	pip install --force-reinstall gevent==1.2.2
-	pip install --force-reinstall greenlet==0.4.12
+    -   pip install --force-reinstall gevent==1.2.2
+    -   pip install --force-reinstall greenlet==0.4.12
 *   pickle
 
 In order to run the code you have to place an embedding file under ```utils``` folder inside the source folder. 
