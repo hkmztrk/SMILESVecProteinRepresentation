@@ -4,7 +4,7 @@ letters = ["D" ,"E", "J", "R", "L", "M", "T", "Z" ,"X", "d", "e", "j", "r", "m",
 
 
 def loadElements():
-	with open('elements.txt') as f:
+	with open('utils/elements.txt') as f:
 		element_list = f.read().splitlines()
 	f.close()
 	return element_list
