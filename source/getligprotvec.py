@@ -1,9 +1,11 @@
 import os, sys, pickle, json
 from chembl_webresource_client.new_client import new_client
 from getsmilesvec import *
+import shutil
 
-
-mapfile = "utils/chembl_uniprot_mapping.txt"
+MAPNAME = "chembl_uniprot_mapping.txt"
+MAPURL = "ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/%s" %MAPNAME
+mapfile = "utils/%s" %MAPNAME
 proteins_path = "utils/prots_sample.txt"
 emb_path = "utils/" + sys.argv[1]
 
@@ -77,13 +79,13 @@ def getProteinVec(proteins_path):
 	proteinVectors = []
 
 	for pli in PLIlist:
-		if pli is not "none":
+		if (pli is not "none") and (bool(pli.ligands) is True):
 			sumVec = [float(0) for i in range(100)]
 			protein = pli.uniprotid
 			ligands = pli.ligands
+			print("processing: " + str(protein))
 
 			for ligand, smi in ligands.iteritems():
-				#print(smi)
 				ligVec = getSMIVector(smilesEMB, smi) #q, wordOrChar
 				sumVec = [sumVec[i]+ligVec[i] for i in range(len(ligVec))]
 
@@ -96,6 +98,9 @@ def getProteinVec(proteins_path):
 
 
 if __name__=="__main__":
+	#TODO: add date check for file OR make an argument
+    os.system("wget %s" %MAPURL)
+    shutil.move("%s" %MAPNAME, "utils/%s" %MAPNAME)
     getProteinVec(proteins_path)
     #a = pickle.load(open("output.vec"))
     #print(a)
