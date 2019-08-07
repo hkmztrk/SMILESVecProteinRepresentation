@@ -34,22 +34,23 @@ def getChEMBLID(prot):
 
 def activity_parser(activities):
 	compounds = {}
-
-	for activity in activities:
-		cid = activity["molecule_chembl_id"]
-		canon_smi = activity["canonical_smiles"]
-		#activityval = activity["standard_value"]
-		#if activityval < 10000:
-		if canon_smi is not None:
-		  compounds[cid] = canon_smi
+	if activities is not None:
+		for activity in activities:
+			cid = activity["molecule_chembl_id"]
+			canon_smi = activity["canonical_smiles"]
+			#activityval = activity["standard_value"]
+			#if activityval < 10000:
+			if canon_smi is not None:
+			  compounds[cid] = canon_smi
 	return compounds
-
 
 
 
 def getLigandInteractions(proteins_path):
 	proteins = [line.strip() for line in open(proteins_path)]
 	print("Constructing protein vectors..")
+	connection_error_counter =0
+	activities = None
 	protlist = []	
 	for prot in proteins:
 		chmblid = prot
@@ -59,7 +60,12 @@ def getLigandInteractions(proteins_path):
 			print("Fetching interactions for", prot, chmblid)
 
 		if chmblid is not "none":
-			activities = new_client.activity.filter(target_chembl_id=chmblid) #resjson = s.get_target_bioactivities(chemblid)
+			while activities is None and connection_error_counter < CONN_MAX_TRY:
+				try:
+					activities = new_client.activity.filter(target_chembl_id=chmblid) #resjson = s.get_target_bioactivities(chemblid)
+				except requests.exceptions.ConnectionError:
+					connection_error_counter +=1
+
 			compounds = activity_parser(activities)
 			#print(compounds)
 			protx = PLI(prot, chmblid, compounds)
