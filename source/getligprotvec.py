@@ -8,6 +8,7 @@ MAPURL = "ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/%s" %MAPNAME
 mapfile = "utils/%s" %MAPNAME
 proteins_path = "utils/prots_sample.txt"
 emb_path = "utils/" + sys.argv[1]
+CONN_MAX_TRY = 5
 
 
 class PLI:
