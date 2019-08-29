@@ -60,7 +60,14 @@ python getligprotvec.py drug.l8.pubchem.canon.ws20.txt
 ```
 
 output: ```prot.vec``` is a pickle file.
-use ```pickle.load(open("prot.vec"))``` to open it. 
+use ```pickle.load(open("prot.vec"))```  OR
+
+```
+with open('protein.vec', 'rb') as f:
+        prots= pickle.load(f, encoding='bytes')
+``` 
+
+to open it. 
 
 ### How to train your own embeddings of SMILES?
 
