@@ -60,10 +60,10 @@ def getLigandInteractions(proteins_path):
 			while activities is None and connection_error_counter < CONN_MAX_TRY:
 				try:
 					activities = new_client.activity.filter(target_chembl_id=chmblid) #resjson = s.get_target_bioactivities(chemblid)
-					print(activities)
+					#print(activities)
 				except requests.exceptions.ConnectionError:
 					connection_error_counter +=1
-					print("connection retry")
+					#print("connection retry")
 
 			compounds = activity_parser(activities)
 			#print(compounds)
