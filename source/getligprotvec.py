@@ -2,6 +2,7 @@ import os, sys, pickle, json
 from chembl_webresource_client.new_client import new_client
 from getsmilesvec import *
 import shutil
+from pli import PLI
 
 MAPNAME = "chembl_uniprot_mapping.txt"
 MAPURL = "ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/%s" %MAPNAME
@@ -10,12 +11,6 @@ proteins_path = "utils/prots_sample.txt"
 emb_path = "utils/" + sys.argv[1]
 CONN_MAX_TRY = 5
 
-
-class PLI:
-	def __init__(self, uniprot_, chembl_, ligands_):
-		self.uniprotid = uniprot_
-		self.chemblid = chembl_
-		self.ligands = ligands_
 
 def load_uniprot2chembl(file):
 	return {line.split()[0]:line.split()[1].strip() for line in open(file)}
@@ -51,21 +46,24 @@ def getLigandInteractions(proteins_path):
 	proteins = [line.strip() for line in open(proteins_path)]
 	print("Constructing protein vectors..")
 	connection_error_counter =0
-	activities = None
 	protlist = []	
+	chmblid = ""
 	for prot in proteins:
 		chmblid = prot
 
 		if "CHEMBL" not in prot:
 			chmblid = getChEMBLID(prot)
-			print("Fetching interactions for", prot, chmblid)
+		print("Fetching interactions for", prot, chmblid)
 
 		if chmblid is not "none":
+			activities = None
 			while activities is None and connection_error_counter < CONN_MAX_TRY:
 				try:
 					activities = new_client.activity.filter(target_chembl_id=chmblid) #resjson = s.get_target_bioactivities(chemblid)
+					print(activities)
 				except requests.exceptions.ConnectionError:
 					connection_error_counter +=1
+					print("connection retry")
 
 			compounds = activity_parser(activities)
 			#print(compounds)
@@ -92,7 +90,7 @@ def getProteinVec(proteins_path):
 			ligands = pli.ligands
 			print("processing: " + str(protein))
 
-			for ligand, smi in ligands.iteritems():
+			for ligand, smi in ligands.items():
 				ligVec = getSMIVector(smilesEMB, smi) #q, wordOrChar
 				sumVec = [sumVec[i]+ligVec[i] for i in range(len(ligVec))]
 
@@ -106,8 +104,8 @@ def getProteinVec(proteins_path):
 
 if __name__=="__main__":
 	#TODO: add date check for file OR make an argument
-    os.system("wget %s" %MAPURL)
-    shutil.move("%s" %MAPNAME, "utils/%s" %MAPNAME)
+    #os.system("wget %s" %MAPURL)
+    #shutil.move("%s" %MAPNAME, "utils/%s" %MAPNAME)
     getProteinVec(proteins_path)
     #a = pickle.load(open("output.vec"))
     #print(a)
